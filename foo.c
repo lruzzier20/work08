@@ -1,3 +1,4 @@
+#include <stdio.h>
 int mystrlen( char *s ){
   int l=0;
   while (s[l]){
@@ -30,6 +31,15 @@ int mystrcmp( char *s1, char *s2 ){
   while(s1[q]){
     if(s1[q]>s2[q]){return 1;}
     if(s1[q]<s2[q]){return -1;}
+    q++;
+  }
+  return 0;
+}
+char * mystrchr( char *s, char c ){
+  int r=0;
+  while(s[r]){
+    if(s[r]==c){return s+r;}
+    r++;
   }
   return 0;
 }
